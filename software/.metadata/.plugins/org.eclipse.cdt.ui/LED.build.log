@@ -1,0 +1,19 @@
+01:02:27 **** Build of configuration Nios II for project LED ****
+make all 
+Info: Building ../LED_bsp/
+D:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../LED_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../LED_bsp//HAL/inc -I../LED_bsp/ -I../LED_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:90:4: warning: implicit declaration of function 'IOWR_ALTERA_AVALON_PIO_DATA' [-Wimplicit-function-declaration]
+    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE,1);
+    ^
+hello_world_small.c:90:32: error: 'LED_PIO_BASE' undeclared (first use in this function)
+    IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE,1);
+                                ^
+hello_world_small.c:90:32: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/hello_world_small.o] Error 1
+
+01:02:30 Build Finished (took 2s.787ms)
+
